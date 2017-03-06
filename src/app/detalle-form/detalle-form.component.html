@@ -1,0 +1,19 @@
+
+<form [formGroup]="form" autocomplete="off" novalidate class="lesson-form">
+
+    <fieldset>
+        <legend>Detalle</legend>
+        <div class="form-field">
+            <label>Dueno:</label>
+            <input name="title" formControlName="dueno">
+            <div class="field-error-message"
+                 *ngIf="isErrorVisible('dueno','required')">Este campo es obligatorio</div>
+        </div>
+        <div class="form-field">
+            <label>Detalle Url:</label>
+            <input name="title" formControlName="url">
+            <div class="field-error-message" *ngIf="isErrorVisible('url','required')">Este campo es obligatorio</div>
+        </div>
+    </fieldset>
+
+</form>

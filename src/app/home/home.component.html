@@ -1,0 +1,11 @@
+<h2>Lista de dueños de perros</h2>
+
+
+
+<input class="search-bar" placeholder="Buscar (Distinge de mayus y minus)"(keyup)="search(input.value)" #input>
+
+<div class="lessons-list-container v-h-center-block-parent">
+
+    <lista-detalle *ngIf="filtered" [detalles]="filtered"></lista-detalle>
+
+</div>

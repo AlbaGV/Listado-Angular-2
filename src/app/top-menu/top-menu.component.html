@@ -1,0 +1,26 @@
+<header class="l-header v-center-parent">
+    
+
+    <ul class="top-menu disable-link-styles">
+        <li>
+            <a routerLink="home"
+               routerLinkActive="menu-active">Inicio</a>
+        </li>
+        <li>
+            <a routerLink="perros"
+               routerLinkActive="menu-active">Perros</a>
+        </li>
+        <li>
+            <a routerLinkActive="menu-active" routerLink="login"
+                *ngIf="!authInfo?.isLoggedIn()">Iniciar Sesion</a>
+        </li>
+        <li>
+            <a routerLinkActive="menu-active" routerLink="register"
+               *ngIf="!authInfo?.isLoggedIn()">Registrarse</a>
+        </li>
+        <li>
+            <a *ngIf="authInfo?.isLoggedIn()" (click)="logout()">Cerrar sesion</a>
+        </li>
+    </ul>
+
+</header>

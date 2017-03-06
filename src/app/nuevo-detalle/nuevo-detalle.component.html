@@ -1,0 +1,5 @@
+
+<detalle-form #form></detalle-form>
+
+<button [disabled]="!form.valid"
+        (click)="save(form)">Guardar nuevo detalle</button>

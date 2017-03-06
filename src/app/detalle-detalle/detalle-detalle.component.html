@@ -1,0 +1,12 @@
+<div class="nav-bar">
+    <button (click)="previous()">Posterior</button>
+    <button (click)="next()" >Siguiente</button>
+</div>
+
+<h3>{{ detalle?.dueno }}</h3>
+
+
+<div class="tools-bar">
+    <button routerLink="edit">Editar detalle</button>
+    <button (click)="requestDetalleDeletion()">Eliminar</button>
+</div>

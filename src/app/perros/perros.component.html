@@ -1,0 +1,14 @@
+<h2>Lista de perros</h2>
+<table class="courses-list card card-strong">
+    <tr class="course-summary" *ngFor="let perro of (perros$ | async)">
+
+        <td class="description">
+            {{perro.nombre}}
+        </td>
+        <td>
+            <button [routerLink]="perro.url">Ver</button>
+        </td>
+    </tr>
+</table>
+
+<router-outlet></router-outlet>

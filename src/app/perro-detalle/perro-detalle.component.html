@@ -1,0 +1,22 @@
+
+
+<h2>{{ (perro$ | async)?.nombre  }}</h2>
+
+
+<div class="lessons-list-container v-h-center-block-parent">
+
+    <div class="nav-bar">
+        <button (click)="previous()">Pagina anterior</button>
+        <button (click)="next()">Siguiente pagina</button>
+    </div>
+
+    <lista-detalle *ngIf="detalles" [detalles]="detalles"
+                  (detalle)="navigateToDetalle($event)"></lista-detalle>
+
+    <div class="tools-bar">
+        <button routerLink="new" [queryParams]="{perroId: (perro$ | async)?.$key }">
+            Nuevo Detalle
+        </button>
+    </div>
+
+</div>
